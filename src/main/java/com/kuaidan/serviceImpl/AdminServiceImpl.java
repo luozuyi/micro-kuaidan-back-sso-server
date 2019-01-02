@@ -91,7 +91,7 @@ public class AdminServiceImpl implements AdminService{
                     List<SysRes> sysResList = sysResMapper.selectByRoleId(sysRoleId);
                     map.put("sysResList", sysResList);
                     result.setData(map);
-                    Cookie adminCookie=new Cookie("aidianmaoAdminToken",token);
+                    Cookie adminCookie=new Cookie("kuaidanAdminToken",token);
                     adminCookie.setMaxAge(30*24*60*60);   //存活期为一个月 30*24*60*60
                     adminCookie.setPath("/");
                     response.addCookie(adminCookie);
